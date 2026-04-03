@@ -1,0 +1,279 @@
+/* jai shree ram */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+body{
+    background-image: url("https://pngmagic.com/webp_images/light-blue-website-background-image.webp");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* header  */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.9rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgb(6, 24, 62);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px){
+    .nav{
+        width: 90%;  /* chhoti screens ke liye width adjust */
+        padding: 1rem;
+    }
+}
+
+#theme-toggle{
+    border: none;
+    background: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.counting_div{
+    display: flex;
+    flex-direction: column;
+}
+.main-container{
+    background-color: aliceblue;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    gap: 2rem;
+    /* box-shadow: 0.021rem 0.021rem 0.001rem; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.5rem;
+}
+.user-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+#user-input{
+    width: 80%;
+    padding:0.4rem;
+    border: 0.5px solid rgb(185, 185, 185);
+    border-radius: 0.2rem;
+
+}
+#search-button{
+    width: 18%;
+    color:rgb(255, 255, 255);
+    font: bolder;
+    border: none;
+    border-radius: 0.24rem;
+    background-color: rgb(43, 167, 255);
+}
+#search-button:hover{
+    background-color: rgb(33, 140, 255);
+    flex-wrap: wrap;
+}
+.stats-container{
+    /* border: 1px solid blueviolet; */
+    display: flex;
+    justify-content: space-around;
+}
+.progress{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.easy-progress{
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    /* easy colors */
+    color: #00B8A3;
+    border: 1px solid #00B8A3;
+    background-color: #E6FFFA;
+
+    background: conic-gradient(#00B8A3 var(--progress-degree, 0%), #E6FFFA 0);
+}
+.medium-progress{
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    /* medium colors */
+    color: #FFC01E;
+    border: 1px solid #FFC01E;
+    background-color: #FFF7E6;
+
+    background: conic-gradient(#FFC01E var(--progress-degree, 0%), #FFF7E6 0);
+}
+.hard-progress{
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    /* hard colors */
+    color: #FF375F;
+    border: 1px solid #FF375F;
+    background-color: #FFE6EA;
+
+background: conic-gradient(#FF375F var(--progress-degree, 0%), #FFE6EA 0);
+}
+
+.progress-boxes{
+    display: flex;
+
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem;
+    
+}
+.progress-chart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+#progress-easy-btn{
+
+    color:rgb(7, 206, 0);
+    font: lighter;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(235, 255, 240);
+    padding: 0.25rem 3rem;
+    border: 1px solid rgb(0, 227, 0);
+    text-align: center;
+    background: linear-gradient(to right, 
+        rgb(100, 255, 100) var(--progress-width, 0%),
+        rgb(235, 255, 240) var(--progress-width, 0%));
+
+}
+#progress-medium-btn{
+
+    color:#ff9500;
+    font: lighter;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(235, 255, 240);
+    padding: 0.25rem 3rem;
+    border: 1px solid #ffa600;
+    text-align: center;
+    background: linear-gradient(to right, 
+        #ffa600 var(--progress-width, 0%),
+        #fffed3 var(--progress-width, 0%));
+
+}
+#progress-hard-btn{
+
+    color:#FF375F;
+    font: lighter;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(235, 255, 240);
+    padding: 0.25rem 3rem;
+    border: 1px solid #FF375F;
+    text-align: center;
+    background: linear-gradient(to right, 
+        #ff3737 var(--progress-width, 0%),
+        #FFE6EA var(--progress-width, 0%));
+
+}
+/* contest rating */
+#contest-rating{
+    margin-top: 1.5rem;
+    color:#006f6d;
+    font: lighter;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(235, 255, 253);
+    padding: 0.5rem;
+    border: 1px solid #014e8d;
+    text-align: center;
+    /* visibility: hidden; */
+
+}
+
+
+
+/* Dark  */
+.dark{
+    background-image: url("https://img.freepik.com/premium-vector/modern-luxury-shiny-black-with-gold-lines-elegant-background_907220-1990.jpg");
+    color: white;
+}
+
+.dark .main-container{
+    background: #1e1e1e;
+}
+
+/* footer */
+footer{
+    position: fixed;
+    bottom: 1rem;
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+/* making repsonsive */
