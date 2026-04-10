@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    overflow-x: hidden;
 }
 /* header  */
 .header{
@@ -157,6 +157,7 @@ body{
     .hamburger{
         display: block;
     }
+    
 }
 
 /* ===== DESKTOP ===== */
@@ -192,11 +193,10 @@ body{
     box-shadow: 0.021rem 0.021rem 0.11rem;
 }
 
-@media screen and (max-width) {
-    .main-container{
-       width : 90vh;
-       transform: scale(5);
-    }
+@media screen and (max-width: 768px) {
+  .main-container {
+    transform: scale(0.8);
+  }
 }
 
 
