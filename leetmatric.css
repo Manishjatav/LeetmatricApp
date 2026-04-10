@@ -1,13 +1,12 @@
 /* jai shree ram */
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: "Mulish", sans-serif;
+    font-family: "Inter Tight", sans-serif;
+    overflow-x: hidden;
 }
 
 body{
-    background-image: url("https://pngmagic.com/webp_images/light-blue-website-background-image.webp");
+    background: linear-gradient(to right, #dbeafe, #ffffff, #e8d6ff);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,7 +14,6 @@ body{
     align-items: center;
 
 }
-
 /* header  */
 .header{
     position: absolute;
@@ -28,19 +26,36 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    background: rgb(6, 24, 62);
+    background: linear-gradient(110deg, #0a1f44, #0d2b6b, #123a8c);
     color: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+
+
 .logo{
     font-size: 1.2rem;
     font-weight: 700;
+    
+}
+.logo a{
+    text-decoration: none;
+    color: white;
 }
 
+
+/* heading  */
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0;
+}
+
+/* nav default */
 .nav{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -50,12 +65,109 @@ body{
     font-weight: 600;
 }
 
+.hamburger{
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.navMin{
+    display: none;
+}
+
+.navMin.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navMin.active a{
+    text-decoration: none;
+    color: white;
+}
+.navMin a:hover{
+    color: rgb(115, 232, 255);
+}
+
+
+/* ===== NAVBAR BASE ===== */
+.nav{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger{
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* mini screeen */
+.navMin{
+    position: fixed;
+    top: -100%;              
+    left: 0;                 
+    width: 100%;
+    height: auto;
+    background: linear-gradient(110deg, #0a1f44, #0d2b6b, #123a8c);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 1.5rem 0;
+
+    transition: 0.3s ease;
+    z-index: 1050;
+}
+
+/* open */
+.navMin.active{
+    top: 60px;
+}
+
+/* links */
+.navMin a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navMin a:hover{
+    color: rgb(115, 232, 255);
+}
+
+/* ===== MOBILE ===== */
 @media screen and (max-width: 768px){
     .nav{
-        width: 90%;  /* chhoti screens ke liye width adjust */
-        padding: 1rem;
+        display: none;
+    }
+    .hamburger{
+        display: block;
     }
 }
+
+/* ===== DESKTOP ===== */
+@media screen and (min-width: 769px){
+    .navMin{
+        display: none !important;
+    }
+}
+
+
+
 
 #theme-toggle{
     border: none;
@@ -70,22 +182,28 @@ body{
     flex-direction: column;
 }
 .main-container{
-    background-color: aliceblue;
-    padding: 2rem 2rem;
+    background: linear-gradient(135deg, #e3f2fd, #ede7f6);
+    padding: 1.5rem 2rem;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    width: 28%;
-    gap: 2rem;
-    /* box-shadow: 0.021rem 0.021rem 0.001rem; */
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: auto;
+    gap: .6rem;
+    box-shadow: 0.021rem 0.021rem 0.11rem;
 }
+
+@media screen and (max-width) {
+    .main-container{
+       width : 90vh;
+       transform: scale(5);
+    }
+}
+
 
 .user-container{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 0.5rem;
 }
 .user-input-container{
     display: flex;
@@ -256,6 +374,10 @@ background: conic-gradient(#FF375F var(--progress-degree, 0%), #FFE6EA 0);
 .dark{
     background-image: url("https://img.freepik.com/premium-vector/modern-luxury-shiny-black-with-gold-lines-elegant-background_907220-1990.jpg");
     color: white;
+    .about{
+        color: black;
+        background: #c3c3c3;
+    }
 }
 
 .dark .main-container{
@@ -276,4 +398,37 @@ footer{
 
 
 
-/* making repsonsive */
+
+
+
+
+.about{
+    max-width: 768px;
+    margin: 1rem;
+    padding: 2rem;
+    background: rgb(237, 237, 237);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgb(55, 0, 255);
+    transition: 0.3s ease;
+}
+
+
+.about:hover{
+    transform: translateY(-6px);
+}
+
+
+/* paragraph */
+.about p{
+    line-height: 1.6;
+}
+
+/* list */
+.about li{
+    margin-bottom: 0.6rem;
+}

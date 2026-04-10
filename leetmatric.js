@@ -1,22 +1,21 @@
-// jai shree ram
-// "chatgpt **...koi valid browser event nahi hai.
+// jsrm
 
-// Browser sirf kuch specific events ko samajhta hai, jaise:
 
-// "DOMContentLoaded"
 
-// "load"
-
-// "click"
-
-// "submit"
-
-// "scroll"
-
-// "input"
-
-// etc.
 document.addEventListener("DOMContentLoaded",function(){
+    const hamburger = document.querySelector(".hamburger");
+    const navMin = document.querySelector(".navMin");
+
+    hamburger.onclick = () => {
+        navMin.classList.toggle("active");
+    };
+
+    // dark mode ke liye
+
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+    });
 
     const searchButton = document.getElementById('search-button');
     const usernameInput = document.getElementById('user-input');
@@ -204,13 +203,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
 
-// dark mode ke liye
 
-const toggle = document.getElementById("theme-toggle");
-
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-});
 
 
 
