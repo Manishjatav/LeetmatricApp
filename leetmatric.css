@@ -195,7 +195,8 @@ body{
 
 @media screen and (max-width: 768px) {
   .main-container {
-    transform: scale(0.8);
+    padding: 1.5rem 1rem;
+    transform: scale(0.85);
   }
 }
 
@@ -431,4 +432,23 @@ footer{
 /* list */
 .about li{
     margin-bottom: 0.6rem;
+}
+
+
+
+/* scroll bar change */
+/* Chrome, Edge, Brave */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #b3efff;
+}
+
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #041465 #e8d6ff;
 }

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Users/hp/Downloads/infosec-club-mnit"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "LeetmatricAPP"
+	}
+}
