@@ -399,7 +399,7 @@ footer{
 
 
 
-
+/* about page-> about.html */
 
 
 
@@ -407,18 +407,30 @@ footer{
     max-width: 768px;
     margin: 1rem;
     padding: 2rem;
-    background: rgb(237, 237, 237);
+    background: transparent;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
-    border: 2px solid rgb(55, 0, 255);
+    border: 2px solid rgb(44, 5, 121);
     transition: 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 
+@media screen and (max-width: 768px){
+    .about{
+        padding: 1rem;
+        text-align: center;
+        min-height: 80vh;
+        scale: calc(0.8);
+        min-width: 100vw;
+        margin: 0px;
+    }
+}
 .about:hover{
     transform: translateY(-6px);
 }
@@ -432,6 +444,12 @@ footer{
 /* list */
 .about li{
     margin-bottom: 0.6rem;
+}
+
+
+
+.howToUse{
+    padding: 5px;
 }
 
 
